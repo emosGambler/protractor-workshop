@@ -1,0 +1,29 @@
+{
+  "name": "protractor-workshops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && protractor ./temp/config.js",
+    "before-test": "webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emosGambler/protractor-workshop.git"
+  },
+  "keywords": [
+    "protractor",
+    "workshops"
+  ],
+  "author": "Jacek Góraj <jacek.goraj@gft.com, jckgrj@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emosGambler/protractor-workshop/issues"
+  },
+  "homepage": "https://github.com/emosGambler/protractor-workshop#readme",
+  "devDependencies": {
+    "@types/jasmine": "2.5.45",
+    "protractor": "^5.4.1",
+    "typescript": "^3.1.6"
+  }
+}
