@@ -1,8 +1,9 @@
 import { browser } from "protractor";
+import { config } from "./../../config";
 
-describe('TODO', () => {
+describe('XYZ Bank', () => {
     it('should go to a valid URL', () => {
-        browser.get("http://todomvc.com/examples/angularjs/#/");
-        expect(browser.getCurrentUrl()).toEqual("http://todomvc.com/examples/angularjs/#/");
+        browser.get(config.baseUrl);
+        expect(browser.getCurrentUrl()).toEqual(config.baseUrl);
     });
 });
