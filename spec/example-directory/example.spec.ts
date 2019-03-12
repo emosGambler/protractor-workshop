@@ -11,8 +11,11 @@ const userPanel: UserPanel = new UserPanel();
 
 describe("XYZ Bank app", () => {
 
-    it("should go to a valid URL", () => {
+    beforeAll(() => {
         browser.get(config.baseUrl);
+    });
+
+    it("should go to a valid URL", () => {
         expect(browser.getCurrentUrl()).toEqual(config.baseUrl);
     });
     it("should go to Customer Login page", () => {
