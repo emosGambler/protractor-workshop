@@ -1,4 +1,4 @@
-import { ElementFinder, $, $$ } from "protractor";
+import { ElementFinder, $, $$, promise } from "protractor";
 
 export class UserPanel {
     private logoutButtonCss: string = "button.logout";
@@ -10,5 +10,13 @@ export class UserPanel {
     constructor() {
         this.logoutButton = $(this.logoutButtonCss);
         this.usernameLabel = $(this.usernameLabelCss);
+    }
+
+    public logout(): void {
+        this.logoutButton.click();
+    }
+
+    public getUsername(): promise.Promise<string> {
+        return this.usernameLabel.getText();
     }
 }

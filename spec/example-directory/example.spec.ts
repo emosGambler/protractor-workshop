@@ -20,16 +20,14 @@ describe("XYZ Bank app", () => {
     });
     it("should go to Customer Login page", () => {
         home.customerLoginButton.click();
-        expect(customerLogin.yourNameDropdown.isDisplayed()).toEqual(true);
+        expect(customerLogin.isYourNameDisplayed()).toEqual(true);
     });
     it(`should login as ${USERNAME}`, () => {
-        customerLogin.yourNameDropdown.click();
-        customerLogin.customerList.get(4).click();
-        customerLogin.loginButton.click();
-        expect(userPanel.usernameLabel.getText()).toEqual(USERNAME);
+        customerLogin.loginAs(USERNAME);
+        expect(userPanel.getUsername()).toEqual(USERNAME);
     });
     it("should logout", () => {
-        userPanel.logoutButton.click();
-        expect(customerLogin.yourNameDropdown.isDisplayed()).toEqual(true);
+        userPanel.logout();
+        expect(customerLogin.isYourNameDisplayed()).toEqual(true);
     });
 });
