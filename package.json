@@ -26,5 +26,8 @@
     "@types/node": "^10.12.18",
     "protractor": "^5.4.1",
     "typescript": "^3.1.6"
+  },
+  "devDependencies": {
+    "jasmine-console-reporter": "^3.1.0"
   }
 }
