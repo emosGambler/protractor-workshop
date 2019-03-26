@@ -4,9 +4,14 @@ import { consoleReporter } from "./spec/support/reporter";
 export let config: Config = {
     baseUrl: "http://www.way2automation.com/angularjs-protractor/banking/#/login",
     directConnect: true,
-    capabilities: {
-        browserName: "firefox"
-    },
+    multiCapabilities: [
+        {
+            browserName: "firefox"
+        },
+        {
+            browserName: "chrome"
+        }
+    ],
     specs: [
         "spec/**/*.spec.js"
     ],
