@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && protractor ./temp/config.js",
+    "test:firefox": "tsc && protractor ./temp/config.js --browser=firefox",
+    "test:chrome": "tsc && protractor ./temp/config.js --browser=chrome",
     "before-test": "webdriver-manager update"
   },
   "repository": {
