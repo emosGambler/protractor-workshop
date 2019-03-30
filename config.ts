@@ -1,5 +1,6 @@
 import { Config } from "protractor";
 import { consoleReporter } from "./spec/support/reporter";
+import { htmlReporter } from "./spec/support/reporter";
 import { DEFAULT_USERNAME } from "./spec/support/data";
 
 export let config: Config = {
@@ -16,5 +17,6 @@ export let config: Config = {
     ],
     onPrepare: () => {
         jasmine.getEnv().addReporter(consoleReporter);
+        jasmine.getEnv().addReporter(htmlReporter);
     }
 }

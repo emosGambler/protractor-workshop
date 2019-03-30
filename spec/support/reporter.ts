@@ -1,4 +1,5 @@
 import * as JasmineConsoleReporter from  "jasmine-console-reporter";
+import * as Jasmine2HtmlReporter from "protractor-jasmine2-html-reporter"
 
 export const consoleReporter = new JasmineConsoleReporter({
     colors: 1,
@@ -10,4 +11,8 @@ export const consoleReporter = new JasmineConsoleReporter({
     activity: "dots",
     emoji: true,
     beep: true
+});
+
+export const htmlReporter = new Jasmine2HtmlReporter({
+    savePath: "temp/report"
 });
