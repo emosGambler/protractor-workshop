@@ -27,7 +27,7 @@ describe("XYZ Bank app", () => {
 
     it(`should login as ${username}`, () => {
         customerLogin.loginAs(username);
-        expect(userPanel.getUsername()).toEqual(username);
+        expect(userPanel.getUsername()).toBe("Jacek Góraj", "Username is not correct!");
     });
 
     it("should logout", () => {
