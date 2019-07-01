@@ -1,1 +1,1 @@
-export const USERNAME: string = "Albus Dumbledore";
+export const DEFAULT_USERNAME: string = "Albus Dumbledore";

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && protractor ./temp/config.js",
+    "test:firefox": "tsc && protractor ./temp/config.js --browser=firefox --params.username='Hermoine Granger'",
+    "test:chrome": "tsc && protractor ./temp/config.js --browser=chrome",
     "before-test": "webdriver-manager update"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "@types/jasmine": "2.5.45",
     "@types/node": "^10.12.18",
     "protractor": "^5.4.1",
+    "protractor-jasmine2-html-reporter": "0.0.7",
     "typescript": "^3.1.6"
   },
   "devDependencies": {
